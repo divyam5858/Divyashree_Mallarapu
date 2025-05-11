@@ -1,31 +1,37 @@
+/* Import Google font */
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
 
-
-* {font-family: 'Readex Pro';}
-
+/* Set font family for the entire page */
+* {
+    font-family: 'Readex Pro', sans-serif;
+}
 
 a {
     text-decoration: none;
-    color: white !important;
+    color: #1e90ff !important; /* Set the color for links to blue */
     font-weight: 500;
 }
 
-p {
-    border: 1px solid rgba(255, 255, 255);
-    border-radius: 0.5rem;
-    padding: calc(1em - 1px)
-}
-
+/* Set hover effect for links */
 a:hover {
-    color: #d33682 !important;
-    text-decoration: none;
+    color: #d33682 !important; /* Change color on hover to a nice pink */
+    text-decoration: underline; /* Underline links on hover */
 }
 
+/* Style for paragraphs, with border and padding */
+p {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 0.5rem;
+    padding: calc(1em - 1px);
+}
+
+/* Hide unnecessary Streamlit elements (Header and Footer) */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* Remove the margin at the top and bottom of horizontal rules */
 hr {
     margin-top: 0px;
     margin-bottom: 5%;
 }
-
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}

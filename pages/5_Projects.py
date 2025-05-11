@@ -14,11 +14,50 @@ with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
 # Load project images
+pdf_img = Image.open("assets/pdf.png")
 rubber_img = Image.open("assets/rubber_defect.png")
 bias_img = Image.open("assets/political_bias.jpeg")
 rag_img = Image.open("assets/rag_chatbot.jpg")
 maintenance_img = Image.open("assets/predictive_maintenance.jpeg")
 image_gen_img = Image.open("assets/ai_image_gen.jpeg")
+
+# --- AI Image Generator ---
+with st.container():
+    text_column, image_column = st.columns((3,1))
+    with text_column:
+        st.subheader("AI Image Generator (Text-to-Image using Diffusion Models)", divider="blue")
+        st.write("*Creative Generative AI Project*")
+        st.markdown("""
+            - ► Built a generative tool that transforms text prompts into realistic images using **diffusion models**.
+            - ► Supports creative AI-driven content generation with impressive output quality.
+        """)
+        col1, col2 = st.columns(2)
+        with col1:
+            mention(label="GitHub Repo", icon="github", url="https://github.com/divyam5858/AI_Image_Generater")
+        with col2:
+            mention(label="Live App", icon="streamlit", url="https://aiimagegenerater.streamlit.app/")
+
+    with image_column:
+        st.image(image_gen_img)
+
+# --- PDF Question Answering App ---
+with st.container():
+    text_column, image_column = st.columns((3,1))
+    with text_column:
+        st.subheader("PDF Question Answering App", divider="blue")
+        st.write("*LangChain + Hugging Face + Streamlit Project*")
+        st.markdown("""
+            - ► Uses **LangChain**, **Sentence Transformers**, and **FAISS** to enable PDF-based QA.
+            - ► Retrieves contextual chunks from PDFs and answers questions using `flan-t5-base` from Hugging Face.
+        """)
+        col1, col2 = st.columns(2)
+        with col1:
+            mention(label="GitHub Repo", icon="github", url="https://github.com/divyam5858/PDF_QA")
+        with col2:
+            mention(label="Live App", icon="streamlit", url="https://pdf-query-answer.streamlit.app/")
+
+    with image_column:
+        st.image(pdf_img) 
 
 # --- Defect Detection in Rubber ---
 with st.container():
@@ -92,21 +131,4 @@ with st.container():
     with image_column:
         st.image(maintenance_img)
 
-# --- AI Image Generator ---
-with st.container():
-    text_column, image_column = st.columns((3,1))
-    with text_column:
-        st.subheader("AI Image Generator (Text-to-Image using Diffusion Models)", divider="blue")
-        st.write("*Creative Generative AI Project*")
-        st.markdown("""
-            - ► Built a generative tool that transforms text prompts into realistic images using **diffusion models**.
-            - ► Supports creative AI-driven content generation with impressive output quality.
-        """)
-        col1, col2 = st.columns(2)
-        with col1:
-            mention(label="GitHub Repo", icon="github", url="https://github.com/divyam5858/AI_Image_Generater")
-        with col2:
-            mention(label="Live App", icon="streamlit", url="https://aiimagegenerater.streamlit.app/")
 
-    with image_column:
-        st.image(image_gen_img)

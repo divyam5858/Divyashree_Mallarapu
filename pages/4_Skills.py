@@ -18,6 +18,7 @@ def txt3(a, b):
   with col2:
     b_no_commas = b.replace(',', '')
     st.markdown(b_no_commas)
+    
 
 st.markdown(f'<p style="font-size: 20px;">Machine Learning, Deep Learning, Computer Vision, Docker, SQL</p>', unsafe_allow_html=True)
 

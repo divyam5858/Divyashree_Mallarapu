@@ -20,10 +20,11 @@ profile_pic = Image.open(profile_pic)
 
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+
 # --- HERO SECTION ---
 with st.container():
-    left_column, right_column = st.columns((1,2))
-    
+    left_column, right_column = st.columns((1, 2))
+
     with left_column:
         st.image(profile_pic)
 
@@ -43,7 +44,6 @@ with st.container():
                                          Instagram="https://www.instagram.com/divyashree_mallarapu",
                                          Twitter="https://x.com/Divya_Mallarapu"),
                                          unsafe_allow_html=True)
-
 
 # --- Skills ---
 st.write('\n')
@@ -79,7 +79,7 @@ st.subheader("Work Experience", divider="red")
 
 st.write(
     """
-**∎ AI Engineer Intern @ [ResoluteAI Software Pvt Ltd](https://resoluteaisoftware.in/)**<br>
+**∎ AI Engineer Intern @ [ResoluteAI Software](https://resoluteaisoftware.in/)**<br>
 **Aug 2024 - Feb 2025**
 - ► Developed YOLO-based object detection models achieving 95% accuracy and built production-grade real-time applications using Streamlit and OpenCV.
 - ► Implemented advanced OCR using PaddleOCR and EasyOCR, achieving 90% accuracy in extracting text from legal and financial documents.
@@ -111,8 +111,6 @@ st.write('\n')
 st.write(
     """
 **∎ Text to Image Generation App**
-
-
 - ► Built a text-to-image generation model using diffusion models for high-quality image synthesis.
     """
 )
@@ -122,8 +120,6 @@ st.write('\n')
 st.write(
     """
 **∎ RAG Document Chatbot**
-
-
 - ► Built an AI-powered document chatbot using retrieval-augmented generation (RAG) for intelligent Q&A.
     """
 )
@@ -133,8 +129,6 @@ st.write('\n')
 st.write(
     """
 **∎ Defect Detection in Rubber**
-
-
 - ► Developed a defect detection system for rubber blocks using YOLOv8 for object detection and SAM for segmentation.
     """
 )
@@ -144,8 +138,6 @@ st.write('\n')
 st.write(
     """
 **∎ Predictive Maintenance for Industrial Machinery**
-
-
 - ► Created machine learning models to predict equipment failures, reducing downtime and optimizing maintenance schedules.
     """
 )
@@ -155,9 +147,6 @@ st.write('\n')
 st.write(
     """
 **∎ Political Bias Detection App**
-
-
 - ► Built an NLP model to analyze political news articles, classify bias (Left/Right/Center), detect fake news, and compare sources from multiple news websites.
     """
 )
-

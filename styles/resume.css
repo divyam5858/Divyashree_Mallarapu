@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
 
-
-* {font-family: 'Readex Pro';}
-
+* {
+    font-family: 'Readex Pro';
+    color: #333 !important;  /* Ensuring default text color is dark for light theme */
+}
 
 a {
     text-decoration: none;
-    color: white !important;
+    color: #1E90FF !important; /* A visible color for links */
     font-weight: 500;
 }
 
 a:hover {
-    color: #d33682 !important;
+    color: #d33682 !important; /* Maintaining hover effect */
     text-decoration: none;
 }
 
@@ -27,6 +28,32 @@ hr {
     margin-bottom: 5%;
 }
 
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+/* Ensuring link visibility in light and dark themes */
+body {
+    background-color: #fff; /* Set to white background for light theme */
+}
+
+.dark .body {
+    background-color: #2E2E2E; /* Dark background for dark theme */
+    color: white !important;  /* Ensure text color remains light */
+}
+
+a {
+    color: #1E90FF !important; /* Light theme link color */
+}
+
+.dark a {
+    color: #87CEFA !important; /* Lighter blue link color for dark theme */
+}
