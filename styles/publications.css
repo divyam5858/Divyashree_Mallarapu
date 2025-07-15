@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
+/* Default font setup */
+* {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+/* Theme-aware colors */
+html[data-theme="light"] body,
+html[data-theme="light"] * {
+    color: #111111 !important;
+    background-color: #ffffff;
+}
+
+html[data-theme="dark"] body,
+html[data-theme="dark"] * {
+    color: white !important;
+    background-color: #0e1117;
+}
+
+/* Link styling */
+a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+html[data-theme="light"] a {
+    color: #1a0dab !important;
+}
+
+html[data-theme="dark"] a {
+    color: #1e90ff !important;
+}
+
+a:hover {
+    color: #d33682 !important;
+}
+
+/* Headings */
+html[data-theme="light"] h1,
+html[data-theme="light"] h2,
+html[data-theme="light"] h3 {
+    color: #111111 !important;
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3 {
+    color: #ffffff !important;
+}
+
+/* Horizontal Rule */
+hr {
+    margin-top: 0px;
+    margin-bottom: 5%;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hide default Streamlit UI */
+#MainMenu, footer, header {
+    visibility: hidden;
+}

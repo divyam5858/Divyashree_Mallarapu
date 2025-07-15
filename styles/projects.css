@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
 
+/* Universal font setup */
+* {
+    font-family: 'Readex Pro', sans-serif;
+    color: inherit; /* Let Streamlit handle theme (light/dark) */
+}
 
-* {font-family: 'Readex Pro';}
+/* Body background only for dark theme */
+body {
+    background-color: #0e1117;
+}
 
+/* Link appearance */
 a {
     text-decoration: none;
-    color: white !important;
     font-weight: 500;
+    color: #1e90ff !important;
 }
 
 a:hover {
@@ -14,18 +23,38 @@ a:hover {
     text-decoration: none;
 }
 
+/* Ensure mention component icons are always visible */
+a.mention {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.3rem;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #1e90ff !important;
+    font-weight: 600;
+}
+
+a.mention:hover {
+    color: #d33682 !important;
+}
+
+/* List and section styling */
 ul {
-    border: 1px solid rgba(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.7);
     border-radius: 0.5rem;
     padding: calc(1em - 1px);
     list-style-type: none;
 }
 
+/* Divider spacing */
 hr {
     margin-top: 0px;
     margin-bottom: 5%;
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
+/* Hide Streamlit default elements */
+#MainMenu, footer, header {
+    visibility: hidden;
+}

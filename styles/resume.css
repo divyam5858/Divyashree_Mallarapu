@@ -1,59 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
 
+/* Set consistent font for entire app */
 * {
-    font-family: 'Readex Pro';
-    color: #333 !important;  /* Ensuring default text color is dark for light theme */
+    font-family: 'Readex Pro', sans-serif;
+    box-sizing: border-box;
 }
 
+/* Light Theme Settings */
+html[data-theme="light"] body,
+html[data-theme="light"] * {
+    color: #111 !important;
+    background-color: #ffffff !important;
+}
+
+/* Dark Theme Settings */
+html[data-theme="dark"] body,
+html[data-theme="dark"] * {
+    color: #ffffff !important;
+    background-color: #0e1117 !important;
+}
+
+/* Links */
 a {
     text-decoration: none;
-    color: #1E90FF !important; /* A visible color for links */
     font-weight: 500;
 }
 
+html[data-theme="light"] a {
+    color: #1a0dab !important; /* Standard blue for light mode */
+}
+
+html[data-theme="dark"] a {
+    color: #1e90ff !important; /* Bright blue for dark mode */
+}
+
 a:hover {
-    color: #d33682 !important; /* Maintaining hover effect */
-    text-decoration: none;
+    color: #d33682 !important;
 }
 
-ul {
-    border: 1px solid rgba(255, 255, 255);
-    border-radius: 0.5rem;
-    padding: calc(1em - 1px);
-    list-style-type: none;
-}
-
+/* Divider */
 hr {
     margin-top: 0px;
     margin-bottom: 5%;
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
 }
 
-#MainMenu {
-    visibility: hidden;
+/* Styled unordered list */
+ul {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 0.5rem;
+    padding: 1em;
+    list-style-type: none;
 }
 
-footer {
-    visibility: hidden;
-}
-
+/* Hide Streamlit's system UI */
+#MainMenu,
+footer,
 header {
     visibility: hidden;
 }
 
-/* Ensuring link visibility in light and dark themes */
-body {
-    background-color: #fff; /* Set to white background for light theme */
-}
-
-.dark .body {
-    background-color: #2E2E2E; /* Dark background for dark theme */
-    color: white !important;  /* Ensure text color remains light */
-}
-
-a {
-    color: #1E90FF !important; /* Light theme link color */
-}
-
-.dark a {
-    color: #87CEFA !important; /* Lighter blue link color for dark theme */
+/* Target only the profile image */
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* for circular image */
+    border: 2px solid #ccc;
 }

@@ -2,6 +2,14 @@ from pathlib import Path
 from PIL import Image
 import streamlit as st
 from utils import social_icons
+import base64
+from io import BytesIO
+
+def profile_pic_to_base64(img):
+    buffer = BytesIO()
+    img.save(buffer, format="JPEG")
+    return base64.b64encode(buffer.getvalue()).decode()
+
 
 st.set_page_config(layout="centered")
 
@@ -26,11 +34,14 @@ with st.container():
     left_column, right_column = st.columns((1, 2))
 
     with left_column:
-        st.image(profile_pic)
+        st.markdown(
+        f'<img src="data:image/jpeg;base64,{profile_pic_to_base64(profile_pic)}" class="profile-pic">',
+        unsafe_allow_html=True
+    )
 
     with right_column:
         st.title("Divyashree Mallarapu")
-        st.write("AI Engineer")
+        st.write("AI & ML Developer | Data-Centric Problem Solver")
         st.download_button(
             label=" 📄 Download Resume",
             data=PDFbyte,
@@ -42,8 +53,10 @@ with st.container():
         st.markdown(social_icons(32, 32, LinkedIn="https://www.linkedin.com/in/divyashree-mallarapu",
                                          GitHub="https://github.com/divyam5858",
                                          Instagram="https://www.instagram.com/divyashree_mallarapu",
-                                         Twitter="https://x.com/Divya_Mallarapu"),
+                                         Twitter="https://x.com/Divya_Mallarapu",
+                                         Foundit="https://www.foundit.in/seeker/profile"),
                                          unsafe_allow_html=True)
+
 
 # --- Skills ---
 st.write('\n')
@@ -54,9 +67,13 @@ st.write(
 - ► Image and Video Processing
 - ► Git
 - ► SQL
-- ► Programming languages: Python, C
+- ► Programming languages: Python, C, HTML, CSS, JavaScript
+- ► Cloud Platforms: Azure
+- ► Database Management: MySQL, MongoDB
+- ► Version Control: Git, GitHub
+- ► Data Visualization: Matplotlib, Seaborn, Plotly
 - ► Operating Systems: Windows
-- ► Libraries & Frameworks: Ultralytics, PyTorch, Tensorflow, Keras, Streamlit, Flask, OpenCV, Pandas, Numpy, Matplotlib, Seaborn, Scikit-learn, Pillow
+- ► Libraries & Frameworks: Ultralytics, PyTorch, Tensorflow, Keras, Streamlit, Gradio, Flask, OpenCV, Pandas, Numpy, Matplotlib, Seaborn, Scikit-learn, Pillow
 - ► Tools: Labelimg
 """
 )
@@ -149,4 +166,18 @@ st.write(
 **∎ Political Bias Detection App**
 - ► Built an NLP model to analyze political news articles, classify bias (Left/Right/Center), detect fake news, and compare sources from multiple news websites.
     """
+)
+
+# --- PUBLICATIONS ---
+st.write('\n')
+st.subheader("Publications", divider="red")
+
+st.write(
+    """
+**∎ Kickstart to Compiler Design Fundamentals**  
+Co-Author | Published June 2025  
+- Breaks down the compilation process from source code to optimized machine instructions.  
+- Aimed at students and software developers for a deep understanding of how code executes.  
+- 🔗 [Buy on AVA (India)](https://orangeava.in/products/kickstart-compiler-design-fundamentals) | [Amazon India](https://shorturl.at/zqMaj)
+"""
 )
