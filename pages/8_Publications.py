@@ -57,11 +57,3 @@ with col2:
 </a>
 """, unsafe_allow_html=True)
 
-# --- Sneak Peek Section ---
-st.markdown("### 👀 Sneak Peek", unsafe_allow_html=True)
-st.markdown("Preview the opening pages of the book below:")
-
-with open(sneak_peek_file, "rb") as f:
-    base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-    pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="450" type="application/pdf"></iframe>'
-    st.markdown(pdf_display, unsafe_allow_html=True)
