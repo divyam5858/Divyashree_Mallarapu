@@ -41,7 +41,7 @@ with st.container():
 
     with right_column:
         st.title("Divyashree Mallarapu")
-        st.write("AI & ML Developer | Data-Centric Problem Solver")
+        st.write("AI & ML Developer | Published Author | Data-Centric Problem Solver")
         st.download_button(
             label=" 📄 Download Resume",
             data=PDFbyte,
