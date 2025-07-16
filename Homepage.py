@@ -69,7 +69,7 @@ Let’s connect and collaborate to build smarter tech for a smarter world.
         """, unsafe_allow_html=True)
         st.markdown("""
             <div style='text-align: center;'>
-                <p>AI & ML Engineer</p>
+                <p>AI & ML Engineer | Published Author</p>
                 <p>📍 Bengaluru, India</p>
             </div>
         """, unsafe_allow_html=True)
