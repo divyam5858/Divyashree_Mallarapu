@@ -63,7 +63,7 @@ with st.container():
     """, unsafe_allow_html=True)
         # ---------- DCL MERN EXPERIENCE ----------
 
-dcl_image_path = "assets/dcl_logo.png"
+dcl_image_path = "assets/dcl.jfif"
 with open(dcl_image_path, "rb") as img_file:
     dcl_base64 = base64.b64encode(img_file.read()).decode()
 
