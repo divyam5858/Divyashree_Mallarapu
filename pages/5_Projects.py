@@ -20,6 +20,7 @@ maintenance_img = Image.open("assets/predictive_maintenance.jpeg")
 image_gen_img = Image.open("assets/ai_image_gen.jpeg")
 aqi_img = Image.open("assets/aqi.jpeg")
 neuro_img = Image.open("assets/Neusrosense.jpeg")
+blogfit_img = Image.open("assets/blogfit_img.jpg")
 
 # Icon URLs
 GITHUB_ICON = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
