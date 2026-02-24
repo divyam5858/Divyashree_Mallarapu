@@ -20,15 +20,15 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- Embed Full Page Google Form ---
-form_url = "https://docs.google.com/forms/d/e/1FAIpQLScSVpIg7IM1nG_E3souOmlToWOffTcfQUoQOs5HA6Tqjo1SYg/viewform?embedded=true"
-st.components.v1.html(f"""
+form_url = "https://docs.google.com/forms/d/e/1FAIpQLSeC7x2oFQv6utUsvJ19tQYVSi6W76zUIn984H7oofDNI77wFA/viewform?embedded=true"
+st.components.v1.html(
+    f"""
     <iframe src="{form_url}"
-            width="100%"
-            height="1600"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            style="border: none;">
-    Loading…
+        width="100%"
+        height="1600"
+        frameborder="0"
+        style="border:none;">
     </iframe>
-""", height=1650)
+    """,
+    height=1650,
+)
