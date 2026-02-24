@@ -69,6 +69,20 @@ project_block(
 )
 
 project_block(
+    "EatFit Blog Website Replica – Responsive UI Clone",
+    "*HTML + CSS + Responsive Web Design*",
+    """
+    - ► Developed a responsive replica of the EatFit blog website focusing on layout accuracy, typography, and visual structure.
+    - ► Implemented modern CSS techniques including Flexbox, Grid, spacing systems, and reusable styling components.
+    - ► Deployed the website on Vercel ensuring proper responsiveness and consistent UI across desktop and mobile screens.
+    """,
+    github="https://github.com/divyam5858/Eatfitblog",
+    live="https://eatfitblog.vercel.app/",
+    image=blogfit_img
+)
+
+
+project_block(
     "AI Image Generator (Text-to-Image using Diffusion Models)",
     "*Creative Generative AI Project*",
     """
