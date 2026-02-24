@@ -11,7 +11,7 @@ css_file = current_dir.parent / "styles" / "projects.css"
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
-# Load project images
+# ---------- LOAD IMAGES ----------
 pdf_img = Image.open("assets/pdf.png")
 rubber_img = Image.open("assets/rubber_defect.png")
 bias_img = Image.open("assets/political_bias.jpeg")
@@ -23,165 +23,169 @@ neuro_img = Image.open("assets/Neusrosense.jpeg")
 blogfit_img = Image.open("assets/blogfit_img.jpg")
 dcl_img = Image.open("assets/dcl.jpg")
 
-# Icon URLs
+# ---------- ICONS ----------
 GITHUB_ICON = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
 STREAMLIT_ICON = "https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.png"
 HF_ICON = "https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+VERCEL_ICON = "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png"
 
 def icon_link(url, icon, label):
     return f"""
-    <a href="{url}" target="_blank" style="text-decoration: none; margin-right: 15px;">
-        <img src="{icon}" width="18" style="vertical-align: middle; margin-right: 6px;"> {label}
+    <a href="{url}" target="_blank" style="text-decoration:none;margin-right:18px;font-weight:500;">
+        <img src="{icon}" width="18" style="vertical-align:middle;margin-right:6px;"> {label}
     </a>
     """
 
-# --- Projects ---
+# ---------- PROFESSIONAL PROJECT CARD ----------
 def project_block(title, desc, bullets, github=None, live=None, live_type="streamlit", image=None):
+
+    # choose correct icon
+    if live_type == "streamlit":
+        live_icon = STREAMLIT_ICON
+    elif live_type == "vercel":
+        live_icon = VERCEL_ICON
+    else:
+        live_icon = HF_ICON
+
     with st.container():
-        text_column, image_column = st.columns((3, 1))
+        st.markdown("<div style='padding:18px 10px;border-radius:14px;background:#fafafa;margin-bottom:22px;'>",
+                    unsafe_allow_html=True)
+
+        text_column, image_column = st.columns((3,1))
+
         with text_column:
             st.subheader(title, divider="blue")
-            st.write(desc)
+            st.markdown(desc)
             st.markdown(bullets)
-            col1, col2 = st.columns(2)
+
+            links = st.columns(2)
             if github:
-                with col1:
+                with links[0]:
                     st.markdown(icon_link(github, GITHUB_ICON, "GitHub Repo"), unsafe_allow_html=True)
+
             if live:
-                with col2:
-                    live_icon = STREAMLIT_ICON if live_type == "streamlit" else HF_ICON
-                    label = "Live App"
-                    st.markdown(icon_link(live, live_icon, label), unsafe_allow_html=True)
+                with links[1]:
+                    st.markdown(icon_link(live, live_icon, "Live App"), unsafe_allow_html=True)
+
         if image:
             with image_column:
-                st.image(image)
+                st.image(image, use_container_width=True)
 
-# --- Add Projects ---
+        st.markdown("</div>", unsafe_allow_html=True)
+
+# ---------- PROJECTS ----------
+
 project_block(
-    "NeuroSense – Multimodal AI Platform for Early Detection of Neurodegenerative Diseases",
-    "*Healthcare AI + Machine Learning + Flask + Deployment*",
-    """
-    - ► Developed an AI-powered clinical decision support platform for early risk prediction of neurodegenerative diseases including **Alzheimer’s**, **Parkinson’s**, and related disorders.
-    - ► Implemented structured clinical data processing with machine learning–based risk assessment and designed the system to support multimodal medical inputs.
-    - ► Built the full web-based application with backend integration and deployed the production system for real-world access.
-    """,
-    github="https://github.com/divyam5858/NeuroSense",
-    live="https://urbanupscaleproperties.com/neurosense/",
-    image=neuro_img
+"NeuroSense – Multimodal AI Platform for Early Detection of Neurodegenerative Diseases",
+"*Healthcare AI • Machine Learning • Flask • Deployment*",
+"""
+- ► Developed an AI-powered clinical decision support platform for early prediction of **Alzheimer’s** and **Parkinson’s**.
+- ► Implemented structured medical data processing with ML-based risk scoring and multimodal-ready architecture.
+- ► Built full production web system with backend integration and deployed for real-world access.
+""",
+github="https://github.com/divyam5858/NeuroSense",
+live="https://urbanupscaleproperties.com/neurosense/",
+live_type="vercel",
+image=neuro_img
 )
 
 project_block(
-    "EatFit Blog Website Replica – Responsive UI Clone",
-    "*HTML + CSS + Responsive Web Design*",
-    """
-    - ► Developed a responsive replica of the EatFit blog website focusing on layout accuracy, typography, and visual structure.
-    - ► Implemented modern CSS techniques including Flexbox, Grid, spacing systems, and reusable styling components.
-    - ► Deployed the website on Vercel ensuring proper responsiveness and consistent UI across desktop and mobile screens.
-    """,
-    github="https://github.com/divyam5858/Eatfitblog",
-    live="https://eatfitblog.vercel.app/",
-    image=blogfit_img
+"EatFit Blog Website Replica – Responsive UI Clone",
+"*HTML • CSS • Responsive Design*",
+"""
+- ► Built a responsive replica focusing on layout accuracy, typography, and visual hierarchy.
+- ► Implemented Flexbox, Grid, reusable components, and structured spacing system.
+- ► Deployed on Vercel ensuring consistent UI across desktop and mobile.
+""",
+github="https://github.com/divyam5858/Eatfitblog",
+live="https://eatfitblog.vercel.app/",
+live_type="vercel",
+image=blogfit_img
 )
 
 project_block(
-    "Dhee Coding Lab Homepage Replica – Responsive Landing Page Clone",
-    "*HTML + CSS + Responsive Layout Engineering*",
-    """
-    - ► Built a pixel-accurate replica of the Dhee Coding Lab homepage focusing on layout hierarchy, navigation structure, and visual consistency.
-    - ► Implemented responsive UI using modern CSS techniques including Flexbox, Grid, spacing control, and reusable component styling.
-    - ► Deployed the website on Vercel ensuring cross-device compatibility and consistent alignment across desktop and mobile screens.
-    """,
-    github="https://github.com/divyam5858/dcl_HP_replica",
-    live="https://dcl-clone.vercel.app/",
-    image=dcl_img
-)
-
-
-project_block(
-    "AI Image Generator (Text-to-Image using Diffusion Models)",
-    "*Creative Generative AI Project*",
-    """
-    - ► Built a generative tool that transforms text prompts into realistic images using **diffusion models**.
-    - ► Supports creative AI-driven content generation with impressive output quality.
-    """,
-    github="https://github.com/divyam5858/AI_Image_Generater",
-    live="https://aiimagegenerater.streamlit.app/",
-    live_type="streamlit",
-    image=image_gen_img
+"Dhee Coding Lab Homepage Replica – Responsive Landing Page Clone",
+"*HTML • CSS • UI Engineering*",
+"""
+- ► Developed pixel-accurate homepage clone with navigation structure and layout hierarchy.
+- ► Used modern CSS layout techniques and reusable styling components.
+- ► Deployed on Vercel with cross-device compatibility.
+""",
+github="https://github.com/divyam5858/dcl_HP_replica",
+live="https://dcl-clone.vercel.app/",
+live_type="vercel",
+image=dcl_img
 )
 
 project_block(
-    "PDF Question Answering App",
-    "*LangChain + Hugging Face + Streamlit Project*",
-    """
-    - ► Uses **LangChain**, **Sentence Transformers**, and **FAISS** to enable PDF-based QA.
-    - ► Retrieves contextual chunks from PDFs and answers questions using `flan-t5-base` from Hugging Face.
-    """,
-    github="https://github.com/divyam5858/PDF_QA",
-    live="https://pdf-query-answer.streamlit.app/",
-    live_type="streamlit",
-    image=pdf_img
-)
-
-
-project_block(
-    "Defect Detection in Rubber (YOLO & SAM)",
-    "*Industrial AI Project*",
-    """
-    - ► Developed a defect detection pipeline combining **YOLOv8** for object detection and **SAM** for segmentation.
-    - ► Accurately identifies defects on rubber blocks in manufacturing settings.
-    """,
-    github="https://github.com/divyam5858/Defect_detection-YOLO-SAM",
-    image=rubber_img
+"AI Image Generator",
+"*Diffusion Models • Generative AI*",
+"""
+- ► Converts text prompts into high-quality generated images.
+- ► Demonstrates creative AI-based visual synthesis pipeline.
+""",
+github="https://github.com/divyam5858/AI_Image_Generater",
+live="https://aiimagegenerater.streamlit.app/",
+live_type="streamlit",
+image=image_gen_img
 )
 
 project_block(
-    "Political Bias Detection App (Streamlit)",
-    "*NLP + Streamlit App*",
-    """
-    - ► Scrapes political news and classifies article bias into **Left, Center, or Right** using NLP models.
-    - ► Detects potential misinformation and offers transparent insight into news sources.
-    """,
-    github="https://github.com/divyam5858/AQI-Predictor",
-    live="https://political-bias-detection-app.streamlit.app/",
-    live_type="streamlit",
-    image=bias_img
+"PDF Question Answering App",
+"*LangChain • HuggingFace • Streamlit*",
+"""
+- ► Enables contextual question answering directly from uploaded PDFs.
+- ► Uses FAISS retrieval + flan-t5 language model.
+""",
+github="https://github.com/divyam5858/PDF_QA",
+live="https://pdf-query-answer.streamlit.app/",
+live_type="streamlit",
+image=pdf_img
 )
 
 project_block(
-    "RAG Document Chatbot (Retrieval-Augmented Generation)",
-    "*Generative AI Project*",
-    """
-    - ► Combines **embedding-based retrieval** and **language generation** to build a document-aware chatbot.
-    - ► Provides contextual answers based on document content using FAISS and LLMs.
-    """,
-    github="https://github.com/divyam5858/RAG-Document-Chatbot",
-    live="https://rag-document-chatbot-7848.streamlit.app/",
-    live_type="streamlit",
-    image=rag_img
+"Political Bias Detection App",
+"*NLP • Streamlit*",
+"""
+- ► Classifies political news articles into Left / Center / Right categories.
+- ► Provides transparency and misinformation awareness.
+""",
+github="https://github.com/divyam5858/Political-Bias-Detection-App",
+live="https://political-bias-detection-app.streamlit.app/",
+live_type="streamlit",
+image=bias_img
 )
 
 project_block(
-    "Predictive Maintenance for Industrial Machinery",
-    "*Sensor-based ML Project*",
-    """
-    - ► Developed ML models to predict equipment failures using time-series sensor data.
-    - ► Enables proactive maintenance and reduces operational downtime.
-    """,
-    github="https://github.com/divyam5858/Predictive-Maintenance-Industrial-Machinery",
-    image=maintenance_img
+"RAG Document Chatbot",
+"*Retrieval Augmented Generation • LLM*",
+"""
+- ► Combines embedding search and language generation for document-aware chatbot.
+""",
+github="https://github.com/divyam5858/RAG-Document-Chatbot",
+live="https://rag-document-chatbot-7848.streamlit.app/",
+live_type="streamlit",
+image=rag_img
 )
 
 project_block(
-    "Air Quality Index Predictor",
-    "*Regression + Streamlit Project*",
-    """
-    - ► Predicts AQI values using **scikit-learn regression models** based on weather and pollution features.
-    - ► Visualizes pollution trends through an interactive Streamlit dashboard.
-    - ► Supports environmental awareness and informed health decisions.
-    """,
-    github="https://github.com/divyam5858/AQI-Predictor",
-    live="https://airqualityindex-predictor.streamlit.app",
-    live_type="streamlit",
-    image=aqi_img
+"Predictive Maintenance for Industrial Machinery",
+"*Machine Learning • Time Series*",
+"""
+- ► Predicts equipment failures using sensor data to enable proactive maintenance.
+""",
+github="https://github.com/divyam5858/Predictive-Maintenance-Industrial-Machinery",
+image=maintenance_img
+)
+
+project_block(
+"Air Quality Index Predictor",
+"*Regression • Streamlit Dashboard*",
+"""
+- ► Predicts AQI using weather and pollution features with visualization dashboard.
+""",
+github="https://github.com/divyam5858/AQI-Predictor",
+live="https://airqualityindex-predictor.streamlit.app",
+live_type="streamlit",
+image=aqi_img
 )
