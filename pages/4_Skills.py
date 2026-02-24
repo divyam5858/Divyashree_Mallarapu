@@ -20,7 +20,7 @@ def txt3(a, b):
     st.markdown(b_no_commas)
     
 
-st.markdown(f'<p style="font-size: 20px;">Machine Learning, Deep Learning, Computer Vision, Docker, SQL</p>', unsafe_allow_html=True)
+st.markdown(f'<p style="font-size: 20px;">Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Data Structures, Database, Computer Networking</p>', unsafe_allow_html=True)
 
 txt3("Programming Languages", "`Python`, `C`, `HTML`, `CSS`, `JavaScript`")
 
