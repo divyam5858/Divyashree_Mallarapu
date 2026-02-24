@@ -21,6 +21,7 @@ image_gen_img = Image.open("assets/ai_image_gen.jpeg")
 aqi_img = Image.open("assets/aqi.jpeg")
 neuro_img = Image.open("assets/Neusrosense.jpeg")
 blogfit_img = Image.open("assets/blogfit_img.jpg")
+dcl_img = Image.open("assets/dcl.jpg")
 
 # Icon URLs
 GITHUB_ICON = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
@@ -80,6 +81,19 @@ project_block(
     github="https://github.com/divyam5858/Eatfitblog",
     live="https://eatfitblog.vercel.app/",
     image=blogfit_img
+)
+
+project_block(
+    "Dhee Coding Lab Homepage Replica – Responsive Landing Page Clone",
+    "*HTML + CSS + Responsive Layout Engineering*",
+    """
+    - ► Built a pixel-accurate replica of the Dhee Coding Lab homepage focusing on layout hierarchy, navigation structure, and visual consistency.
+    - ► Implemented responsive UI using modern CSS techniques including Flexbox, Grid, spacing control, and reusable component styling.
+    - ► Deployed the website on Vercel ensuring cross-device compatibility and consistent alignment across desktop and mobile screens.
+    """,
+    github="https://github.com/divyam5858/dcl_HP_replica",
+    live="https://dcl-clone.vercel.app/",
+    image=dcl_img
 )
 
 
