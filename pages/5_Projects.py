@@ -21,7 +21,7 @@ image_gen_img = Image.open("assets/ai_image_gen.jpeg")
 aqi_img = Image.open("assets/aqi.jpeg")
 neuro_img = Image.open("assets/Neusrosense.jpeg")
 blogfit_img = Image.open("assets/blogfit_img.jpg")
-dcl_img = Image.open("assets/dcl.jpg")
+dcl_img = Image.open("assets/dcl.jfif")
 
 # ---------- ICONS ----------
 GITHUB_ICON = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
