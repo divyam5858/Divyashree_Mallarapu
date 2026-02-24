@@ -86,8 +86,6 @@ with st.container():
             <p style="margin: 0; color: #ffffff;">
             ► Currently undergoing structured industry-oriented training in fullstack development using HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB.<br>
             ► Practicing responsive UI implementation, layout engineering, and real-world web application workflows.<br>
-            ► Working with Git-based version control, collaborative development practices, and deployment workflows.<br>
-            ► Receiving additional exposure to Cloud and DevOps fundamentals including Jenkins, Azure, and CI/CD concepts.
             </p>
         </div>
         """, unsafe_allow_html=True)
