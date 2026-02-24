@@ -1,34 +1,40 @@
 import streamlit as st
-from pathlib import Path
 
-# --- Page Config ---
+# ---------- PAGE CONFIG ----------
 st.set_page_config(page_title="Contact", layout="wide")
 
-# --- Hide Streamlit default UI elements (menu, footer) ---
+# ---------- CLEAN UI ----------
 st.markdown("""
-    <style>
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-        header {visibility: hidden;}
-        .block-container {
-            padding-top: 0rem;
-            padding-bottom: 0rem;
-            padding-left: 0rem;
-            padding-right: 0rem;
-        }
-    </style>
+<style>
+#MainMenu {visibility:hidden;}
+footer {visibility:hidden;}
+header {visibility:hidden;}
+
+.block-container{
+    padding-top:2rem;
+    padding-bottom:2rem;
+    max-width:1100px;
+}
+</style>
 """, unsafe_allow_html=True)
 
-# --- Embed Full Page Google Form ---
+# ---------- HEADER ----------
+st.title("📬 Contact Me")
+st.write("Have a job opportunity, project idea, or collaboration in mind? Fill out the form below and I’ll respond soon.")
+
+# ---------- FORM ----------
 form_url = "https://docs.google.com/forms/d/e/1FAIpQLSeC7x2oFQv6utUsvJ19tQYVSi6W76zUIn984H7oofDNI77wFA/viewform?embedded=true"
+
 st.components.v1.html(
     f"""
-    <iframe src="{form_url}"
-        width="100%"
-        height="1600"
-        frameborder="0"
-        style="border:none;">
-    </iframe>
+    <div style="display:flex;justify-content:center;">
+        <iframe src="{form_url}"
+            width="900"
+            height="1500"
+            frameborder="0"
+            style="border-radius:12px;border:1px solid #ddd;">
+        </iframe>
+    </div>
     """,
-    height=1650,
+    height=1550,
 )
