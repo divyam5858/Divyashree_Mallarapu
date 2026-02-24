@@ -56,6 +56,19 @@ def project_block(title, desc, bullets, github=None, live=None, live_type="strea
 
 # --- Add Projects ---
 project_block(
+    "NeuroSense – Multimodal AI Platform for Early Detection of Neurodegenerative Diseases",
+    "*Healthcare AI + Machine Learning + Flask + Deployment*",
+    """
+    - ► Developed an AI-powered clinical decision support platform for early risk prediction of neurodegenerative diseases including **Alzheimer’s**, **Parkinson’s**, and related disorders.
+    - ► Implemented structured clinical data processing with machine learning–based risk assessment and designed the system to support multimodal medical inputs.
+    - ► Built the full web-based application with backend integration and deployed the production system for real-world access.
+    """,
+    github="https://github.com/divyam5858/NeuroSense",
+    live="https://urbanupscaleproperties.com/neurosense/",
+    image=neuro_img
+)
+
+project_block(
     "AI Image Generator (Text-to-Image using Diffusion Models)",
     "*Creative Generative AI Project*",
     """
@@ -81,19 +94,6 @@ project_block(
     image=pdf_img
 )
 
-project_block(
-    "NeuroSense – Early Detection of Neurodegenerative Diseases",
-    "*Healthcare AI + Gradio + Hugging Face Project*",
-    """
-    - ► AI-powered system for early-stage risk prediction of neurodegenerative diseases like **Alzheimer’s** and **Parkinson’s**.
-    - ► Uses NLP-based questionnaire in Phase 1. Future work includes multimodal analysis.
-    - ► Deployed using **Gradio** on **Hugging Face Spaces**.
-    """,
-    github="https://github.com/divyam5858/NeuroSense",
-    live="https://huggingface.co/spaces/divyashree-03/NeuroSense",
-    live_type="huggingface",
-    image=neuro_img
-)
 
 project_block(
     "Defect Detection in Rubber (YOLO & SAM)",
