@@ -1,0 +1,623 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  min-height: calc(100vh - 64px);
+
+  display: flex;
+  align-items: center;
+
+  padding: 70px 32px 60px;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.hero-content {
+  max-width: 650px;
+}
+
+
+/* =========================
+   AVAILABILITY
+========================= */
+
+.availability {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 6px 11px;
+
+  border: 1px solid #2b2f40;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.02);
+
+  color: #9da1b2;
+
+  font-size: 11px;
+
+  margin-bottom: 25px;
+}
+
+.availability-dot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #20d9df;
+
+  box-shadow: 0 0 8px rgba(32, 217, 223, 0.7);
+}
+
+
+/* =========================
+   GREETING
+========================= */
+
+.hero-greeting {
+  margin: 0 0 12px;
+
+  color: #18dce4;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+/* =========================
+   MAIN HEADING
+========================= */
+
+.hero-title {
+  margin: 0;
+
+  color: #f1f1f5;
+
+  font-size: clamp(48px, 5vw, 68px);
+
+  line-height: 0.98;
+
+  letter-spacing: -3px;
+
+  font-weight: 700;
+}
+
+.hero-title span {
+  background: linear-gradient(
+    90deg,
+    #c8c9ff 0%,
+    #9b8cff 45%,
+    #756cff 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.hero-description {
+  max-width: 620px;
+
+  margin: 24px 0 28px;
+
+  color: #9da1b4;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 10px 16px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+/* Primary button */
+
+.btn-primary {
+  color: #0c0d15;
+
+  background: #9583ff;
+
+  border: 1px solid #9583ff;
+}
+
+.btn-primary:hover {
+  background: #a69aff;
+
+  transform: translateY(-2px);
+}
+
+
+/* Secondary button */
+
+.btn-secondary {
+  color: #e2e3eb;
+
+  background: #151722;
+
+  border: 1px solid #303447;
+}
+
+.btn-secondary:hover {
+  border-color: #6258a5;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   RESUME
+========================= */
+
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-left: 5px;
+
+  color: #989cac;
+
+  font-size: 12px;
+
+  transition: color 0.2s ease;
+}
+
+.resume-link:hover {
+  color: #d0d1da;
+}
+
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+
+.hero-socials {
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 30px;
+}
+
+.hero-socials a {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 7px 13px;
+
+  border: 1px solid #282c3c;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.015);
+
+  color: #979bab;
+
+  font-size: 11px;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.hero-socials a:hover {
+  color: #d7d8e1;
+
+  border-color: #514a8a;
+
+  transform: translateY(-2px);
+}
+
+.hero-socials a span {
+  color: #8e83ff;
+}
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.hero-visual {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+/* =====================================================
+   PHOTO AREA
+
+   IMPORTANT:
+   The ring and image use the SAME width and height.
+===================================================== */
+
+.hero-photo-card {
+  --photo-size: 350px;
+
+  position: relative;
+
+  width: var(--photo-size);
+  height: var(--photo-size);
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+}
+
+
+/* =========================
+   GLOW
+========================= */
+
+.photo-glow {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+
+  background: rgba(118, 100, 255, 0.20);
+
+  filter: blur(45px);
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   PURPLE / BLUE RING
+
+   SAME SIZE AS PHOTO
+===================================================== */
+
+.photo-ring {
+  position: relative;
+
+  z-index: 1;
+
+  width: var(--photo-size);
+  height: var(--photo-size);
+
+  flex-shrink: 0;
+
+  padding: 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #7664ff 0%,
+    #5950c7 45%,
+    #7664ff 100%
+  );
+
+  box-shadow:
+    0 0 25px rgba(118, 100, 255, 0.35),
+    0 0 55px rgba(118, 100, 255, 0.12);
+}
+
+
+/* =====================================================
+   PROFILE IMAGE
+
+   EXACT SAME SIZE AS INNER RING AREA
+===================================================== */
+
+.hero-photo {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
+  min-height: 0;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  border-radius: 50%;
+
+  border: 4px solid #10121c;
+
+  box-sizing: border-box;
+
+  filter: saturate(0.94);
+
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+}
+
+
+/* Hover */
+
+.hero-photo-card:hover .hero-photo {
+  transform: scale(1.02);
+
+  filter: saturate(1);
+}
+
+
+/* =========================
+   PHOTO BADGE
+========================= */
+
+.photo-badge {
+  position: absolute;
+
+  z-index: 3;
+
+  left: 50%;
+
+  bottom: -12px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 8px 15px;
+
+  border: 1px solid #373a4d;
+
+  border-radius: 999px;
+
+  background: rgba(13, 15, 25, 0.95);
+
+  color: #d0d1dc;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.35),
+    0 0 20px rgba(32, 217, 223, 0.08);
+}
+
+
+/* Badge dot */
+
+.badge-dot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #20d9df;
+
+  box-shadow:
+    0 0 8px rgba(32, 217, 223, 0.8);
+}
+
+
+/* =========================
+   TECHNOLOGY BADGES
+========================= */
+
+.tech-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  max-width: 500px;
+
+  margin-top: 30px;
+}
+
+.tech-badges span {
+  padding: 6px 11px;
+
+  border: 1px solid #292d3c;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.015);
+
+  color: #898da1;
+
+  font-size: 10px;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.tech-badges span:hover {
+  color: #c3c5d0;
+
+  border-color: #514a8a;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 950px) {
+
+  .hero {
+    padding-top: 60px;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .hero-content {
+    max-width: 700px;
+  }
+
+  .hero-visual {
+    max-width: 450px;
+
+    margin: 0 auto;
+  }
+
+  .hero-photo-card {
+    --photo-size: 360px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: auto;
+
+    padding: 50px 20px 60px;
+  }
+
+  .hero-container {
+    gap: 45px;
+  }
+
+  .availability {
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-size: 45px;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .resume-link {
+    margin-left: 0;
+  }
+
+  .hero-socials {
+    margin-top: 25px;
+  }
+
+  .hero-photo-card {
+    --photo-size: min(320px, 85vw);
+  }
+
+  .tech-badges {
+    max-width: 330px;
+
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,313 @@
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+  padding: 5px 32px 60px;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.about-heading {
+  margin-bottom: 38px;
+}
+
+.about-label {
+  margin: 0 0 12px;
+
+  color: #18dce4;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.about-heading h2 {
+  margin: 0;
+
+  color: #f1f1f5;
+
+  font-size: clamp(34px, 4vw, 48px);
+
+  line-height: 1.12;
+
+  letter-spacing: -1.8px;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   MAIN GRID
+========================= */
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns: 1.25fr 0.9fr;
+
+  gap: 65px;
+
+  align-items: start;
+}
+
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.about-content {
+  max-width: 650px;
+}
+
+.about-content > p {
+  margin: 0 0 18px;
+
+  color: #9da1b4;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+.about-content > p:last-of-type {
+  margin-bottom: 27px;
+}
+
+
+/* =========================
+   INTERESTS
+========================= */
+
+.interests h3 {
+  margin: 0 0 12px;
+
+  color: #e5e5eb;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+}
+
+.interest-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.interest-tag {
+  padding: 5px 10px;
+
+  border: 1px solid #2b2f40;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.015);
+
+  color: #9296aa;
+
+  font-size: 9px;
+
+  line-height: 1;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.interest-tag:hover {
+  color: #c4c6d2;
+
+  border-color: #514a8a;
+
+  background: rgba(118, 100, 255, 0.04);
+}
+
+
+/* =========================
+   HIGHLIGHTS CARD
+========================= */
+
+.highlights-card {
+  padding: 19px 18px 14px;
+
+  border: 1px solid #2d3141;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.025),
+      rgba(255, 255, 255, 0.008)
+    );
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   HIGHLIGHTS HEADER
+========================= */
+
+.highlights-header {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 13px;
+
+  color: #18dce4;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+.highlights-icon {
+  color: #18dce4;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   HIGHLIGHT ROWS
+========================= */
+
+.highlights-list {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.highlight-row {
+  min-height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-bottom: 1px solid #292d3b;
+}
+
+.highlight-row:last-child {
+  border-bottom: none;
+}
+
+
+.highlight-title {
+  color: #e5e6ec;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.highlight-value {
+  color: #888ca2;
+
+  font-size: 9px;
+
+  text-align: right;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+  .about {
+    padding: 85px 28px 90px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .about-content {
+    max-width: 750px;
+  }
+
+  .highlights-card {
+    max-width: 650px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .about {
+    padding: 75px 20px 80px;
+  }
+
+  .about-heading {
+    margin-bottom: 30px;
+  }
+
+  .about-heading h2 {
+    font-size: 25px;
+
+    letter-spacing: -1.2px;
+  }
+
+  .about-content > p {
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+  .highlights-card {
+    padding: 17px 14px 12px;
+  }
+
+  .highlight-row {
+    min-height: 42px;
+
+    gap: 12px;
+  }
+
+  .highlight-title {
+    font-size: 9px;
+  }
+
+  .highlight-value {
+    font-size: 8px;
+
+    white-space: normal;
+  }
+}
