@@ -364,7 +364,7 @@ export const projects = [
       "CSS",
     ],
     github: "https://github.com/divyam5858/Signup-Login",
-    live: "https://bolt-assign-frontend.vercel.app/register",
+    live:'https://bolt-assign-frontend.vercel.app/',
   },
 
   // FRONTEND PROJECTS------------------------------------------------------------------------------------------------------->
