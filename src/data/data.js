@@ -327,7 +327,7 @@ export const projects = [
       "CSS",
     ],
     github: "https://github.com/divyam5858/Appointment",
-    live: "",
+    live: "https://appointment-frontend-delta.vercel.app",
   },
 
   {
@@ -364,7 +364,7 @@ export const projects = [
       "CSS",
     ],
     github: "https://github.com/divyam5858/Signup-Login",
-    live: "",
+    live: "https://bolt-assign-frontend.vercel.app/register",
   },
 
   // FRONTEND PROJECTS------------------------------------------------------------------------------------------------------->
