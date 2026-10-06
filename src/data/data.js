@@ -766,9 +766,70 @@ export const skills = [
 
 // experience---------------------------------------------------------------------------------------------------------------------->
 export const experience = [
-    
+
+  // CURRENT ROLE
   {
     id: 1,
+    role: "Software Engineer",
+    company: "Sulopa Technologies Pvt. Ltd.",
+    duration: "Sep 2026 – Present",
+    type: "Full-Time",
+
+    description:
+      "Working as a Software Engineer, contributing to software development and full-stack engineering projects.",
+
+    responsibilities: [
+      "Developing and maintaining software applications based on project requirements.",
+      "Working with modern web technologies to build scalable and user-focused applications.",
+      "Contributing to application development, debugging, testing, and deployment workflows.",
+      "Collaborating with team members to deliver reliable software solutions.",
+    ],
+
+    technologies: [
+      "JavaScript",
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "REST APIs",
+    ],
+  },
+
+
+  // DHEE CODING LAB
+  {
+    id: 2,
+    role: "Enterprise MERN-Stack Training",
+    company: "Dhee Coding Lab",
+    duration: "Feb 2026 – Jul 2026",
+    type: "Training Program",
+
+    description:
+      "Completed intensive MERN stack training covering frontend, backend, databases, APIs, and full-stack application development.",
+
+    responsibilities: [
+      "Completed intensive MERN stack training covering frontend, backend, and database layers.",
+      "Built REST APIs using Node.js and Express.js with MongoDB data modelling.",
+      "Developed responsive React.js interfaces with routing and state management.",
+      "Practised full-stack application development from setup to deployment.",
+    ],
+
+    technologies: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "REST APIs",
+    ],
+  },
+
+
+  // RESOLUTEAI
+  {
+    id: 3,
     role: "AI Engineer Intern",
     company: "ResoluteAI Software Pvt. Ltd.",
     duration: "Aug 2024 – Feb 2025",
@@ -792,34 +853,6 @@ export const experience = [
       "PyTorch",
       "SAM",
       "Streamlit",
-    ],
-  },
-  {
-    id: 2,
-    role: "Enterprise MERN-Stack Training",
-    company: "Dhee Coding Lab",
-    duration: "2026",
-    type: "Training Program",
-
-    description:
-      "Completed intensive MERN stack training covering frontend, backend, databases, APIs, and full-stack application development.",
-
-    responsibilities: [
-      "Completed intensive MERN stack training covering frontend, backend, and database layers.",
-      "Built REST APIs using Node.js and Express.js with MongoDB data modelling.",
-      "Developed responsive React.js interfaces with routing and state management.",
-      "Practised full-stack application development from setup to deployment.",
-    ],
-
-    technologies: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "REST APIs",
     ],
   },
 ];
