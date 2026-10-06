@@ -49,7 +49,7 @@ export const certifications = [
 
   {
     id: 5,
-    title: "AI/ML Internship",
+    title: "Python Programming",
     issuer: "InternPe",
     type: "Internship Certificate",
     description:
@@ -772,7 +772,7 @@ export const experience = [
   id: 1,
   role: "Software Engineer",
   company: "Sulopa Technologies Pvt. Ltd.",
-  duration: "Sep 2026 – Present",
+  duration: "Oct 2026 – Present",
   type: "Full-Time",
 
   description:
