@@ -7,43 +7,65 @@ const Hero = () => {
     <section className="hero" id="home">
       <div className="hero-container">
 
-        {/* LEFT SIDE */}
+        {/* =========================
+            LEFT SIDE
+        ========================= */}
+
         <div className="hero-content">
 
+          {/* CURRENT STATUS */}
           <div className="availability">
             <span className="availability-dot"></span>
-            Open to Opportunities
+            Software Engineer at Sulopa Technologies
           </div>
 
+
+          {/* GREETING */}
           <p className="hero-greeting">
             Hi, I'm Divyashree Mallarapu
           </p>
 
+
+          {/* MAIN HEADING */}
           <h1 className="hero-title">
-            <span>AI/ML Engineer</span>
+            <span>Software Engineer</span>
             <br />
-            & Full-Stack
+            & AI/ML
             <br />
             Developer
           </h1>
 
+
+          {/* DESCRIPTION */}
           <p className="hero-description">
-            I build intelligent, scalable, and user-focused applications by
-            combining Artificial Intelligence, Machine Learning, and modern
-            web technologies.
+            I build reliable, scalable, and user-focused software by combining
+            full-stack engineering with Artificial Intelligence and Machine
+            Learning to create practical technology solutions.
           </p>
 
-          {/* ACTION BUTTONS */}
+
+          {/* =========================
+              ACTION BUTTONS
+          ========================= */}
+
           <div className="hero-actions">
 
-            <a href="#projects" className="btn btn-primary">
+            <a
+              href="#projects"
+              className="btn btn-primary"
+            >
               View My Projects
               <span>→</span>
             </a>
 
-            <a href="#contact" className="btn btn-secondary">
+
+            <a
+              href="#contact"
+              className="btn btn-secondary"
+            >
               Contact Me
             </a>
+
 
             <a
               href={resume}
@@ -57,9 +79,14 @@ const Hero = () => {
 
           </div>
 
-          {/* SOCIAL LINKS */}
+
+          {/* =========================
+              SOCIAL LINKS
+          ========================= */}
+
           <div className="hero-socials">
 
+            {/* GitHub */}
             <a
               href="https://github.com/divyam5858"
               target="_blank"
@@ -69,6 +96,8 @@ const Hero = () => {
               GitHub
             </a>
 
+
+            {/* LinkedIn */}
             <a
               href="https://in.linkedin.com/in/divyashree-mallarapu"
               target="_blank"
@@ -78,6 +107,8 @@ const Hero = () => {
               LinkedIn
             </a>
 
+
+            {/* Amazon Author */}
             <a
               href="https://www.amazon.com/author/divyashree-mallarapu"
               target="_blank"
@@ -87,6 +118,8 @@ const Hero = () => {
               Amazon-Author
             </a>
 
+
+            {/* LeetCode */}
             <a
               href="https://leetcode.com/u/Divyashree-Mallarapu"
               target="_blank"
@@ -96,6 +129,8 @@ const Hero = () => {
               LeetCode
             </a>
 
+
+            {/* HackerRank */}
             <a
               href="https://www.hackerrank.com/profile/divyamallarapu"
               target="_blank"
@@ -105,42 +140,56 @@ const Hero = () => {
               HackerRank
             </a>
 
-
           </div>
 
         </div>
 
-        {/* RIGHT SIDE */}
+
+        {/* =========================
+            RIGHT SIDE
+        ========================= */}
+
         <div className="hero-visual">
 
           <div className="hero-photo-card">
 
+            {/* GLOW */}
             <div className="photo-glow"></div>
 
+
+            {/* PROFILE IMAGE */}
             <div className="photo-ring">
+
               <img
                 src={profileImage}
                 alt="Divyashree Mallarapu"
                 className="hero-photo"
               />
+
             </div>
 
+
+            {/* PROFILE BADGE */}
             <div className="photo-badge">
               <span className="badge-dot"></span>
-              AI/ML Engineer
+              Software Engineer
             </div>
 
           </div>
 
-          {/* TECHNOLOGY BADGES */}
+
+          {/* =========================
+              TECHNOLOGY BADGES
+          ========================= */}
+
           <div className="tech-badges">
-            <span>Python</span>
-            <span>React</span>
-            <span>ML</span>
             <span>JavaScript</span>
+            <span>React</span>
             <span>Node.js</span>
             <span>MongoDB</span>
-            <span>AI</span>
+            <span>Python</span>
+            <span>AI/ML</span>
+            <span>Git</span>
           </div>
 
         </div>
