@@ -769,30 +769,25 @@ export const experience = [
 
   // CURRENT ROLE
   {
-    id: 1,
-    role: "Software Engineer",
-    company: "Sulopa Technologies Pvt. Ltd.",
-    duration: "Sep 2026 – Present",
-    type: "Full-Time",
+  id: 1,
+  role: "Software Engineer",
+  company: "Sulopa Technologies Pvt. Ltd.",
+  duration: "Sep 2026 – Present",
+  type: "Full-Time",
 
-    description:
-      "Working as a Software Engineer, contributing to software development and full-stack engineering projects.",
+  description:
+    "Working as a Software Engineer at Sulopa Technologies Pvt. Ltd., contributing to software development and supporting the delivery of reliable, scalable technology solutions.",
 
-    responsibilities: [
-      "Developing and maintaining software applications based on project requirements.",
-      "Working with modern web technologies to build scalable and user-focused applications.",
-      "Contributing to application development, debugging, testing, and deployment workflows.",
-      "Collaborating with team members to deliver reliable software solutions.",
-    ],
+  responsibilities: [
+    "Working as a Software Engineer within Sulopa Technologies Pvt. Ltd.",
+    "Contributing to software development activities based on assigned responsibilities and project requirements.",
+    "Collaborating with the team to support application development and delivery.",
+    "Following company engineering practices, policies, and quality expectations.",
+  ],
 
-    technologies: [
-      "JavaScript",
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "REST APIs",
-    ],
+  technologies: [
+
+  ],
   },
 
 
