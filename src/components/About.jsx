@@ -2,12 +2,16 @@ import "./About.css";
 
 const highlights = [
   {
-    title: "AI/ML Engineer",
+    title: "Software Engineer",
+    value: "Sulopa Technologies",
+  },
+  {
+    title: "AI/ML Background",
     value: "Vision & Applied ML",
   },
   {
-    title: "MERN Stack Developer",
-    value: "React · Node · Mongo",
+    title: "Full-Stack Developer",
+    value: "React · Node · MongoDB",
   },
   {
     title: "Published Author",
@@ -18,12 +22,8 @@ const highlights = [
     value: "LeetCode · HackerRank",
   },
   {
-    title: "Final Year Project",
-    value: "NeuroSense platform",
-  },
-  {
-    title: "Availability",
-    value: "Open to Software/AI roles",
+    title: "Engineering Focus",
+    value: "AI · Web · Software",
   },
 ];
 
@@ -33,7 +33,7 @@ const interests = [
   "Computer Vision",
   "Full-Stack Development",
   "Data Structures & Algorithms",
-  "Developer Tools",
+  "Software Engineering",
 ];
 
 const About = () => {
@@ -41,49 +41,65 @@ const About = () => {
     <section className="about" id="about">
       <div className="about-container">
 
-        {/* SECTION HEADING */}
+        {/* =========================
+            SECTION HEADING
+        ========================= */}
+
         <div className="about-heading">
           <p className="about-label">01 — ABOUT</p>
 
           <h2>
-            Engineering intelligent products, end to
-            
-            end
+            Engineering intelligent products, end to end
           </h2>
         </div>
 
-        {/* MAIN CONTENT */}
+
+        {/* =========================
+            MAIN CONTENT
+        ========================= */}
+
         <div className="about-grid">
 
-          {/* LEFT CONTENT */}
+          {/* =========================
+              LEFT CONTENT
+          ========================= */}
+
           <div className="about-content">
 
             <p>
-              I'm an AI/ML Engineer and full-stack developer in my final year
-              of Artificial Intelligence & Machine Learning, focused on turning
-              research-grade models into products people can actually use.
+              I'm a Software Engineer at Sulopa Technologies Pvt. Ltd.,
+              with a background in Artificial Intelligence & Machine Learning
+              and full-stack development.
             </p>
 
             <p>
-              My work spans computer vision pipelines, explainable machine
-              learning for healthcare, and production MERN applications. I
-              care about clean architecture, measurable model quality, and
-              interfaces that make complex systems feel simple.
+              My engineering experience spans computer vision pipelines,
+              machine learning applications, and production-ready web
+              applications. I enjoy building reliable software by combining
+              intelligent systems with clean, practical engineering.
             </p>
 
             <p>
-              Alongside engineering, I write technical books, practise data
-              structures and algorithms daily, and mentor peers through
-              hackathons and developer workshops.
+              Alongside software engineering, I have published technical
+              books on Compiler Design and Data Structures & Algorithms,
+              practise problem solving and DSA, and continue to explore
+              AI/ML and modern full-stack technologies.
             </p>
 
-            {/* INTERESTS */}
+
+            {/* =========================
+                INTERESTS
+            ========================= */}
+
             <div className="interests">
               <h3>INTERESTS</h3>
 
               <div className="interest-list">
                 {interests.map((interest) => (
-                  <span key={interest} className="interest-tag">
+                  <span
+                    key={interest}
+                    className="interest-tag"
+                  >
                     {interest}
                   </span>
                 ))}
@@ -92,7 +108,11 @@ const About = () => {
 
           </div>
 
-          {/* RIGHT HIGHLIGHTS CARD */}
+
+          {/* =========================
+              RIGHT HIGHLIGHTS CARD
+          ========================= */}
+
           <div className="highlights-card">
 
             <div className="highlights-header">
@@ -101,6 +121,7 @@ const About = () => {
             </div>
 
             <div className="highlights-list">
+
               {highlights.map((item) => (
                 <div
                   className="highlight-row"
@@ -115,6 +136,7 @@ const About = () => {
                   </span>
                 </div>
               ))}
+
             </div>
 
           </div>
